@@ -49,7 +49,7 @@ branches, commits, Pull Request, Code Review, Rebase ופתרון Conflict.
 הענף נבנה לפני ש־`main` השתנה, והמטרה היא לעדכן אותו כך שייבנה על `main` העדכני.
 
 1. עברי לענף הפיצ'ר שלך.
-2. עדכני את המידע על הענפים המרוחקים (`git fetch`).
+2. עדכני את המידע על הענפים המרוחקים (`git pull origin name-of-the-feature-branch`).
 3. בצעי Rebase של הענף על `origin/main`.
 4. Git יעצור בגלל **Conflict**. זהי באיזה קובץ ובאיזה חלק בו, ופתרי אותו ידנית.
 5. שמרי **גם את השינוי של `main` וגם את הפיצ'ר שלך**.
