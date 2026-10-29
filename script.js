@@ -27,6 +27,7 @@ function renderTasks() {
     message.className = "empty-message";
     message.textContent = "No tasks to show.";
     taskList.appendChild(message);
+    updateTaskCounter();
     return;
   }
 
@@ -77,3 +78,9 @@ function addTask() {
 }
 
 addButton.addEventListener("click", addTask);
+function updateTaskCounter() {
+  const counter = document.getElementById("task-counter");
+  if (counter) {
+    counter.textContent = `Total tasks: ${tasks.length}`;
+  }
+}
