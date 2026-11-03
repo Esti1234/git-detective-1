@@ -1,25 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Tasks</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="app">
-    <h1>My Tasks</h1>
-    <p id="task-counter">Total tasks: 0</p>
+    <main class="app">
+        <h1>My Tasks</h1>
+        <p id="task-counter" class="counter">Total tasks: 0</p>
 
-    <div class="add-task">
-      <input type="text" id="task-input" placeholder="New task...">
-      <button id="add-button">Add Task</button>
-    </div>
-    <ul id="task-list"></ul>
+        <div class="add-task">
+            <input type="text" id="task-input" placeholder="New task...">
+            <button id="add-button">Add Task</button>
+        </div>
 
-    <p></p> class="hint">Tip: tick a task when it is done.</p>
-  </main>
+        <ul id="task-list">
+            <!-- פריטים לדוגמה - אפשר להשאיר או למחוק בהתאם למה שה-JavaScript שלכן עושה -->
+            <li>ללמוד תכנות אתרים</li>
+            <li>לעבור על הבאגים</li>
+            <li>לסיים את הפרויקט</li>
+        </ul>
 
-  <script src="script.js"></script>
+        <p class="hint">Tip: tick a task when it is done.</p>
+    </main>
+
+    <script src="script.js"></script>
 </body>
 </html>
