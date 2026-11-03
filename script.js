@@ -53,17 +53,10 @@ function renderTasks() {
     taskList.appendChild(item);
   }
 
-  updateCounter();
+updateTaskCounter();
 }
 
-// Show how many tasks are not done yet
-function updateCounter() {
-  const left = tasks.filter(function (task) {
-    return !task.done;
-  }).length;
 
-  taskCounter.textContent = left + " tasks left";
-}
 
 // Add a new task from the text box
 function addTask() {
@@ -79,8 +72,10 @@ function addTask() {
 
 addButton.addEventListener("click", addTask);
 function updateTaskCounter() {
-  const counter = document.getElementById("task-counter");
-  if (counter) {
-    counter.textContent = `Total tasks: ${tasks.length}`;
-  }
+    const counter = document.getElementById("task-counter");
+    if (counter) {
+        const left = tasks.filter(task => !task.done).length;
+        counter.textContent = `${left} tasks left`;
+    }
+
 }
