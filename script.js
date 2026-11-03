@@ -14,6 +14,7 @@ const tasks = [
 
 // Elements from the page
 const taskList = document.getElementById("task-list");
+const taskCounter = document.getElementById("task-counter");
 const taskInput = document.getElementById("task-input");
 const addButton = document.getElementById("add-button");
 
@@ -26,6 +27,7 @@ function renderTasks() {
     message.className = "empty-message";
     message.textContent = "No tasks to show.";
     taskList.appendChild(message);
+    updateTaskCounter();
     return;
   }
 
@@ -50,7 +52,11 @@ function renderTasks() {
     item.appendChild(text);
     taskList.appendChild(item);
   }
+
+updateTaskCounter();
 }
+
+
 
 // Add a new task from the text box
 function addTask() {
@@ -65,3 +71,11 @@ function addTask() {
 }
 
 addButton.addEventListener("click", addTask);
+function updateTaskCounter() {
+    const counter = document.getElementById("task-counter");
+    if (counter) {
+        const left = tasks.filter(task => !task.done).length;
+        counter.textContent = `${left} tasks left`;
+    }
+
+}

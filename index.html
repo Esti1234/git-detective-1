@@ -1,30 +1,31 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>My Tasks</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Tracker</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <main class="app">
-    <h1>My Tasks</h1>
+    <main class="app">
+        <h1>My Tasks</h1>
+        <p id="task-counter" class="counter">Total tasks: 0</p>
 
-    <div class="add-task">
-      <input type="text" id="task-input" placeholder="New task...">
-      <button id="add-button">Add Task</button>
-    </div>
+        <div class="add-task">
+            <input type="text" id="task-input" placeholder="New task...">
+            <button id="add-button">Add Task</button>
+        </div>
 
-    <!-- הוספנו כאן פריטים לדוגמה כדי שהרשימה תוצג מיד במסך -->
-    <ul id="task-list">
-      <li>ללמוד תכנות אתרים</li>
-      <li>לעבור על הבאגים</li>
-      <li>לסיים את הפרויקט</li>
-    </ul>
+        <ul id="task-list">
+            <!-- פריטים לדוגמה - אפשר להשאיר או למחוק בהתאם למה שה-JavaScript שלכן עושה -->
+            <li>ללמוד תכנות אתרים</li>
+            <li>לעבור על הבאגים</li>
+            <li>לסיים את הפרויקט</li>
+        </ul>
 
-    <p class="hint">Tip: tick a task when it is done.</p>
-  </main>
+        <p class="hint">Tip: tick a task when it is done.</p>
+    </main>
 
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
